@@ -1,0 +1,133 @@
+<?php  
+$conexion=mysqli_connect("localhost","root","") or die("Problemas en la conexion");
+mysqli_select_db($conexion,"bd_biblioteca") or die("Problemas en la selección de la base de datos");
+//$examenes = mysqli_query($conexion,"select * from examenes");
+$reg=mysqli_query($conexion,"select * from libros") or die("ERROR");
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Consultas</title>
+  <link rel="stylesheet" href="css/consulta.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+
+  <!--Inicio Barra de navegación -->
+	<nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Coleccion</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <ul class="nav navbar-nav">
+            <li><a href="consulta.html">Consulta</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Buscar">
+            </div>
+            <button type="submit" class="btn btn-default">Buscar</button>
+          </form>
+        </div>
+      </div>
+  </nav>
+  <!--Fin Barra de navegación -->
+
+    <!--Inicio Combo -->
+
+  <select class="dropdown">
+  <option class="dropdown-item">Titulo</option>
+  <option class="dropdown-item">Autor</option>
+  <option class="dropdown-item">ISBN</option>
+  <option class="dropdown-item">Genero</option>
+</select>
+
+  <form class="form-horizontal">
+    <fieldset>
+      <div class="form-group">
+        <label class="col-lg-2 control-label">Ingresa tu Consulta</label>
+        <div class="col-lg-4">
+          <input type="text" class="form-control" id="" placeholder="Buscar">
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <!--Fin Combo -->
+<table class="table table-striped table-hover table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th>ISBN</th>
+      <th>Titulo</th>
+      <th>Autor</th>
+      <th>Genero</th>
+      <th>Editorial</th>
+      <th>Estado</th>
+      <th>Numero de Copias</th>
+    </tr>
+    <form action="mostrar_libros.php" method="get" accept-charset="utf-8">
+    </form>
+  </thead>
+  <tbody>
+    
+  </tbody>
+</table> 
+  <!--Inicio Dropdown de Consulta -->
+  <!--<form class="form-horizontal">
+  <fieldset>
+    <legend>Ingresa datos para la consulta</legend>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Titulo</label>
+      <div class="col-lg-4">
+        <input type="text" class="form-control" id="" placeholder="Titulo del libro">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Autor</label>
+      <div class="col-lg-4">
+        <input class="form-control" id="inputPassword" placeholder="Autor del libro">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-lg-2 control-label">IBSN</label>
+      <div class="col-lg-4">
+        <input class="form-control" id="inputPassword" placeholder="IBSN del libro">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Genero</label>
+      <div class="col-lg-4">
+        <input class="form-control" id="inputPassword" placeholder="Genero del libro">
+      </div>
+    </div>
+
+      <div class="col-lg-4 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Buscar</button>
+        <button type="submit" class="btn btn-primary">Limpiar</button>
+      </div>
+    </fieldset>
+  </form>-->
+  <!--Fin Dropdown de Consulta -->
+
+
+
+</body>
+</html>

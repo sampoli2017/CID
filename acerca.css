@@ -1,0 +1,15 @@
+.objetivo{
+	margin: 5%;
+	padding: 5%;
+}
+
+.consulta{
+	margin: 10%;
+	padding: 10%;
+	background-color: blue;
+}
+
+.tabla{
+	background-color: rgba(0, 0, 0, 0.1);
+	font color: white;
+}

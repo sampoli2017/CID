@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Magra);
+
+.footer{
+	background-color: rgb(0,47,103);
+	display: block;
+	font-family: "Magra";
+	font-size: 15px;
+	text-align: center;
+	height: 350px;
+	width: 33.33333333333333333333333333333333333333333%;
+	border-right: double;
+	border-color: white;
+
+}
+
+.footer legend{
+	color: white;
+}
+
+.footer p{
+	padding-left: 25%;
+	text-align: left;
+	color: white;
+}
+
+.footer a{
+	color: white;
+}
+
+.img{
+	padding: 1%;
+}
+
+* :hover{
+	color: black;
+}
